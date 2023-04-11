@@ -8,5 +8,5 @@ Proyecto el cual tiene como finalidad crear una app movil para desarrollar las c
 - Jaime Gael Sánchez Mónico
 + Carlos Alirio Toledo Rodriguez
 
-## Link de Notion
-https://www.notion.so/invite/63092f1eb9ea110debc994f7304342ae7930e265
+## Notion
+- [Tareas de equipo](https://www.notion.so/invite/63092f1eb9ea110debc994f7304342ae7930e265)
