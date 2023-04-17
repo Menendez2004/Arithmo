@@ -5,12 +5,13 @@ import { RoundedButton } from '../../RoundedButton';
 import { useNavigation } from '@react-navigation/native'
 import { StackNavigationProp } from '@react-navigation/stack'
 import { RootStackParamList } from '../../../../App';
+import useViewModel from './ViewModel';
+import { CustomTexform } from '../../CustomTexform';
 
 
 export const HomeScreen = () => {
     
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const { email, password, onChange } = useViewModel()
 
     const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
 
@@ -38,35 +39,24 @@ export const HomeScreen = () => {
                 </View>
 
                 
-                <View style={styles.imputForm} >
-                    {/*imagenes de formulario email*/}
-                    <Image source={require('../../../../assets/image/email.png')}
-                        style={styles.formIcon} />
-
-                    <TextInput
-                        style={styles.texImputForm}
-                        placeholder='Email'
-                        keyboardType='email-address'
-                        value={email}
-                        onChangeText ={text => setEmail(text)}
-                    />
-                </View>
+                <CustomTexform
+                image={require('../../../../assets/image/email.png')}
+                placeholder='correo electronico'
+                KeyboardType='email-address'
+                property='email'
+                onChangeText={onChange}
+                value={email}
+                />
 
                 {/*ivista del botón de la password*/}
-                <View style={styles.imputForm} >
-                    {/*imagenes de formulario password*/}
-                    <Image source={require('../../../../assets/image/Password.png')}
-                        style={styles.formIcon1} />
-
-                    <TextInput
-                        style={styles.texImputForm}
-                        placeholder='password'
-                        keyboardType='default'
-                        secureTextEntry={true}
-                        value={password}
-                        onChangeText ={text => setPassword(text)}
-                    />
-                </View>
+                <CustomTexform
+                image={require('../../../../assets/image/password.png')}
+                placeholder='Contraseña'
+                KeyboardType='default'
+                property='password'
+                onChangeText={onChange}
+                value={password}
+                />
 
                 <View >
                     <RoundedButton text='ENTRAR' onPress={ () =>{

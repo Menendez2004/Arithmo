@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "Delivery-react-native",
-    "slug": "Delivery-react-native",
+    "name": "Arithmo-react-native",
+    "slug": "Arithmo-react-native",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/image/icon.png",
+    "icon": "./assets/image/Arithmo.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/image/splash.png",
